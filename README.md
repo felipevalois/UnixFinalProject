@@ -9,17 +9,17 @@
 Three Vms were deployed on VMWare Fusion: Master(Debian), Node1(Ubuntu) and Node2(CentOS) using the following images.
 
 [1] [Debian 10.2.0](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso)  
-![](/Users/felipecosta/Desktop/Default-Screenshots/1Debian.png)
+![](./images/1Debian.png)
 **Figure 1** - Master node (Debian)
 <br/>
 
 [2] [Ubuntu 18.04.3](http://releases.ubuntu.com/18.04/ubuntu-18.04.3-desktop-amd64.iso)
-![](/Users/felipecosta/Desktop/Default-Screenshots/2Ubuntu.png)
+![](./images/2Ubuntu.png)
 **Figure 2** - Node1 (Ubuntu)
 <br/>
 
 [3] [CentOS 7.7.1908](http://mirror.mobap.edu/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso)
-![](/Users/felipecosta/Desktop/Default-Screenshots/3CentOS.png)
+![](./images/3CentOS.png)
 **Figure 3** - Node2 (CentOS)
 
 
@@ -80,7 +80,7 @@ adduser user1
 usermod -aG sudo user1
 reboot
 ```
-![](/Users/felipecosta/Desktop/Default-Screenshots/user1.png)
+![](./images/user1.png)
 **Figure 4** - User1
 
 *UBUNTU*
@@ -88,7 +88,7 @@ reboot
 sudo adduser user2
 usermod -aG sudo user2
 ```
-![](/Users/felipecosta/Desktop/Default-Screenshots/user2.png)
+![](./images/user2.png)
 **Figure 5** - User2  
 
 
@@ -97,7 +97,7 @@ usermod -aG sudo user2
 adduser user3
 usermod -aG wheel user3
 ```
-![](/Users/felipecosta/Desktop/Default-Screenshots/user3.png)
+![](./images/user3.png)
 **Figure 6** - User3
 
 ### 1.4 Network Configuration
@@ -140,7 +140,8 @@ ip address add 192.168.1.30 dev ens33
 sudo vi /etc/sysconfig/network-scripts/ifcfg-ens33
 ```
 Modify/add lines highlighted below:
-![](/Users/felipecosta/Desktop/Default-Screenshots/6CentOS-network-scripts.png) **Figure 7** - /etc/sysconfig/network-scripts/ifcfg-ens33
+![](./images/6CentOS-network-scripts.png) 
+**Figure 7** - /etc/sysconfig/network-scripts/ifcfg-ens33
 
 
 ### 1.5 AWS Instance
@@ -154,13 +155,13 @@ Go to AWS Console -> EC2 Dashboard -> Launch Instance
    - Custom TCP (Port 8080)
 4. Leave the remaining configurations as the default, and launch it
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/AWS1.png)
+![](./images/AWS1.png)
 **Figure 8** - AWS instance
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/AWS2.png)
+![](./images/AWS2.png)
 **Figure 9** - EC2 Dashboard
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/AWS3.png)
+![](./images/AWS3.png)
 **Figure 10** - SSH into instance
 
 After that I installed Docker
@@ -368,11 +369,11 @@ ssh -t -i "CS3530.pem" ubuntu@ec2-18-212-183-199.compute-1.amazonaws.com \
 scp -i "CS3530.pem" index.html ubuntu@ec2-18-212-183-199.compute-1.amazonaws.com:/home/ubuntu
 ```
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/output.png)
+![](./images/output.png)
 **Figure 11** - Pt1 Output of ./ec2.sh
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/output2.png)
+![](./images/output2.png)
 **Figure 12** - Pt2 Output of ./ec2.sh
 
-![](/Users/felipecosta/Desktop/Default-Screenshots/output3.png)
+![](./images/output3.png)
 **Figure 13** - AWS file transferred
